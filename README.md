@@ -10,6 +10,17 @@ Everything runs locally. No backend, no analytics.
 
 https://github.com/user-attachments/assets/986baf21-1163-4416-8560-33f7dcc363fa
 
+## Build
+
+Requirements: [Bun](https://bun.sh) 1.4 or newer.
+
+```sh
+git clone https://github.com/0xr3ngar/xide
+cd xide
+bun install
+bun run build
+```
+
 ## Verify with an agent if you're too lazy to read the code
 
 ```md
