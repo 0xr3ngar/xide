@@ -1,6 +1,6 @@
 {
     "name": "xide",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "private": true,
     "description": "Hide posts from countries you don't want to see on X.",
     "keywords": [
