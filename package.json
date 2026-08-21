@@ -5,7 +5,7 @@
     "type": "module",
     "module": "src/index.ts",
     "scripts": {
-        "build": "bun build ./src/index.ts --outfile=dist/content.js && cp manifest.json dist/manifest.json && cp src/ui/panel.css dist/panel.css && cp -r icons dist/icons && cp README.md dist/README.md",
+        "build": "bun build ./src/index.ts --outfile=dist/content.js && cp manifest.json dist/manifest.json && cp src/ui/panel.css dist/panel.css && rm -rf dist/icons && cp -r icons dist/icons && cp README.md dist/README.md",
         "watch": "bun build ./src/index.ts --outfile=dist/content.js --watch",
         "check": "tsc --noEmit",
         "fmt": "oxfmt",
