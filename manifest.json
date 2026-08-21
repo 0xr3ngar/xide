@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Xide",
+  "version": "0.2.0",
+  "description": "Hide posts from countries you don't want to see on X.",
+  "homepage_url": "https://github.com/0xr3ngar/xide",
+  "author": "contact@bnn.dev",
+  "permissions": ["storage", "unlimitedStorage"],
+  "host_permissions": ["https://x.com/*", "https://twitter.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*", "https://twitter.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://x.com/*", "https://twitter.com/*"],
+      "js": ["content.js"],
+      "css": ["panel.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "xide@bnn.dev",
+      "strict_min_version": "140.0"
+    },
+    "gecko_android": {
+      "strict_min_version": "120.0"
+    }
+  },
+  "developer": {
+    "name": "Bogdan (contact@bnn.dev)",
+    "url": "https://github.com/0xr3ngar/xide"
+  }
+}
