@@ -1,10 +1,11 @@
 {
     "name": "xide",
+    "version": "1.0.0",
     "private": true,
     "type": "module",
     "module": "src/index.ts",
     "scripts": {
-        "build": "bun build ./src/index.ts --outfile=dist/content.js && cp manifest.json dist/manifest.json && cp src/ui/panel.css dist/panel.css",
+        "build": "bun build ./src/index.ts --outfile=dist/content.js && cp manifest.json dist/manifest.json && cp src/ui/panel.css dist/panel.css && cp -r icons dist/icons",
         "watch": "bun build ./src/index.ts --outfile=dist/content.js --watch",
         "check": "tsc --noEmit",
         "fmt": "oxfmt",

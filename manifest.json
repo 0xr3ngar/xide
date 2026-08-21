@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Xide",
-    "version": "0.2.0",
+    "version": "1.0.0",
     "description": "Hide posts from countries you don't want to see on X.",
     "homepage_url": "https://github.com/0xr3ngar/xide",
     "author": "contact@bnn.dev",
@@ -33,5 +33,11 @@
     "developer": {
         "name": "Bogdan (contact@bnn.dev)",
         "url": "https://github.com/0xr3ngar/xide"
+    },
+    "icons": {
+        "16": "icons/icon16.png",
+        "32": "icons/icon32.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
     }
 }
