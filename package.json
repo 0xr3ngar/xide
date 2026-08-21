@@ -2,11 +2,30 @@
     "name": "xide",
     "version": "1.0.5",
     "private": true,
+    "description": "Hide posts from countries you don't want to see on X.",
+    "keywords": [
+        "browser-extension",
+        "chrome",
+        "country-filter",
+        "firefox",
+        "twitter",
+        "typescript",
+        "x"
+    ],
+    "homepage": "https://github.com/0xr3ngar/xide",
+    "bugs": {
+        "url": "https://github.com/0xr3ngar/xide/issues"
+    },
+    "license": "MIT",
+    "author": "0xr3ngar",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/0xr3ngar/xide.git"
+    },
     "type": "module",
     "module": "src/index.ts",
     "scripts": {
         "build": "bun build ./src/index.ts --outfile=dist/content.js && cp manifest.json dist/manifest.json && cp src/ui/panel.css dist/panel.css && cp README.md dist/README.md",
-        "watch": "bun build ./src/index.ts --outfile=dist/content.js --watch",
         "check": "tsc --noEmit",
         "fmt": "oxfmt",
         "fmt:check": "oxfmt --check"
@@ -20,5 +39,8 @@
     },
     "peerDependencies": {
         "typescript": "^7"
+    },
+    "engines": {
+        "bun": ">=1.4.0"
     }
 }
