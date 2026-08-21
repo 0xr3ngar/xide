@@ -19,7 +19,11 @@ const plural = (n: number, one: string, many: string) => {
 const createButton = (onClick: () => void) => {
     const button = document.createElement("div");
     button.id = BUTTON_ID;
-    button.innerHTML = `${SVG_ICON}<span class="xide-label">Xide</span>`;
+    button.insertAdjacentHTML("afterbegin", SVG_ICON);
+    const label = document.createElement("span");
+    label.className = "xide-label";
+    label.textContent = "Xide";
+    button.appendChild(label);
     button.addEventListener("click", onClick);
     return button;
 };
@@ -160,7 +164,7 @@ const requireIn = <T extends Element>(root: Element, selector: string) => {
 
 const createPanel = (ctx: UiContext) => {
     const root = document.createElement("div");
-    root.innerHTML = String(panelHtml);
+    root.insertAdjacentHTML("afterbegin", String(panelHtml));
     const modal = root.firstElementChild;
     if (!(modal instanceof HTMLElement)) return null;
     const stats = requireIn<HTMLElement>(modal, `#${STATS_ID}`);
