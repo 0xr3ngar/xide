@@ -1,0 +1,39 @@
+name: cd
+
+on:
+    workflow_run:
+        workflows: ["ci"]
+        types: [completed]
+        branches: [main]
+
+jobs:
+    release:
+        if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main' }}
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  ref: ${{ github.event.workflow_run.head_sha }}
+            - uses: oven-sh/setup-bun@v2
+              with:
+                  bun-version: latest
+            - run: bun install --frozen-lockfile
+            - name: bump version
+              run: |
+                  VERSION=$(bun run .github/scripts/bump.ts)
+                  git config user.name "xide-bot"
+                  git config user.email "contact@bnn.dev"
+                  git add manifest.json package.json
+                  git commit -m "chore: bump version to v${VERSION} [skip ci]"
+                  git push origin main
+            - run: bun run build
+            - name: package
+              run: cd dist && zip -r ../xide.zip .
+            - name: release
+              env:
+                  GH_TOKEN: ${{ github.token }}
+              run: |
+                  VERSION=$(bun run .github/scripts/get-version.ts)
+                  gh release create "v${VERSION}" xide.zip --generate-notes
