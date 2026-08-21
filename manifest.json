@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Xide",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Hide posts from countries you don't want to see on X.",
     "homepage_url": "https://github.com/0xr3ngar/xide",
     "author": "contact@bnn.dev",
