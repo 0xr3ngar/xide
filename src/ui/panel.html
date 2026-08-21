@@ -1,16 +1,24 @@
 <div id="xide-modal">
-  <div id="xide-card">
-    <div class="xide-head">
-      <div class="xide-title">Xide</div>
-      <button class="xide-close" aria-label="Close Xide">✕</button>
+    <div id="xide-card">
+        <div class="xide-head">
+            <div class="xide-title">Xide</div>
+            <button class="xide-close" aria-label="Close Xide">✕</button>
+        </div>
+        <div id="xide-stats"></div>
+        <input
+            id="xide-search"
+            placeholder="Search countries to block"
+            aria-label="Search countries to block"
+        />
+        <div id="xide-chips" class="xide-chips"></div>
+        <div class="xide-divider"></div>
+        <div class="xide-allow-label">Always show these accounts</div>
+        <input
+            id="xide-allow-input"
+            placeholder="@handle, press Enter"
+            aria-label="Accounts to always show"
+        />
+        <div id="xide-allow-chips" class="xide-chips"></div>
     </div>
-    <div id="xide-stats"></div>
-    <input id="xide-search" placeholder="Search countries to block" aria-label="Search countries to block" />
-    <div id="xide-chips" class="xide-chips"></div>
-    <div class="xide-divider"></div>
-    <div class="xide-allow-label">Always show these accounts</div>
-    <input id="xide-allow-input" placeholder="@handle, press Enter" aria-label="Accounts to always show" />
-    <div id="xide-allow-chips" class="xide-chips"></div>
-  </div>
-  <div id="xide-drop" role="listbox" hidden></div>
+    <div id="xide-drop" role="listbox" hidden></div>
 </div>

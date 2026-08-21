@@ -14,6 +14,7 @@ https://github.com/user-attachments/assets/986baf21-1163-4416-8560-33f7dcc363fa
 
 ```md
 Validate this repo (https://github.com/0xr3ngar/xide)
+
 1. Clone into a tmp folder, do not run install: git clone --depth 1 https://github.com/0xr3ngar/xide /tmp/xide
 2. Scout the codebase to verify nothing leaves my browser
 ```
