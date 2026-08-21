@@ -35,10 +35,6 @@ bun install
 bun run build
 ```
 
-`bun run build` is the build script (defined in `package.json`) and executes all
-steps: it bundles `src/` into `dist/content.js` and copies `manifest.json`,
-`panel.css`, `icons/`, and `README.md` into `dist/`.
-
 ## Verify with an agent if you're too lazy to read the code
 
 ```md
