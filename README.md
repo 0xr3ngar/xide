@@ -10,6 +10,16 @@ Everything runs locally. No backend, no analytics.
 
 https://github.com/user-attachments/assets/986baf21-1163-4416-8560-33f7dcc363fa
 
+## Install
+
+Firefox:
+
+https://addons.mozilla.org/en-US/firefox/addon/xide/
+
+Chrome:
+
+TBD
+
 ## Build
 
 Requirements:
