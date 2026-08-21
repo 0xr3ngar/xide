@@ -2,17 +2,15 @@
 
 Hide posts from countries you don't want to see on X.
 
-## Usage
-
 1. Click Xide in the sidebar
 2. Add countries to block
 3. Done, their posts disappear from your timeline
 
 Everything runs locally. No backend, no analytics.
 
-## Verify with an agent
+https://github.com/user-attachments/assets/986baf21-1163-4416-8560-33f7dcc363fa
 
-Verify with your favourite agent that the code is safe, if you're too lazy to read.
+## Verify with an agent if you're too lazy to read the code
 
 ```md
 Validate this repo (https://github.com/0xr3ngar/xide)
