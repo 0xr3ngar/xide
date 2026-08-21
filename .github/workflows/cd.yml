@@ -27,7 +27,7 @@ jobs:
                   git config user.email "contact@bnn.dev"
                   git add manifest.json package.json
                   git commit -m "chore: bump version to v${VERSION} [skip ci]"
-                  git push origin main
+                  git push origin HEAD:main
             - run: bun run build
             - name: package
               run: cd dist && zip -r ../xide.zip .
