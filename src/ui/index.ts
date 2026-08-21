@@ -10,8 +10,6 @@ const STATS_ID = "xide-stats";
 const ALLOW_INPUT_ID = "xide-allow-input";
 const ALLOW_CHIPS_ID = "xide-allow-chips";
 
-const SVG_ICON = `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><line x1="5" y1="5" x2="19" y2="19"/></svg>`;
-
 const plural = (n: number, one: string, many: string) => {
     return n === 1 ? one : many;
 };
@@ -19,11 +17,12 @@ const plural = (n: number, one: string, many: string) => {
 const createButton = (onClick: () => void) => {
     const button = document.createElement("div");
     button.id = BUTTON_ID;
-    button.insertAdjacentHTML("afterbegin", SVG_ICON);
+    const icon = document.createElement("span");
+    icon.className = "xide-icon";
     const label = document.createElement("span");
     label.className = "xide-label";
     label.textContent = "Xide";
-    button.appendChild(label);
+    button.append(icon, label);
     button.addEventListener("click", onClick);
     return button;
 };
@@ -164,8 +163,8 @@ const requireIn = <T extends Element>(root: Element, selector: string) => {
 
 const createPanel = (ctx: UiContext) => {
     const root = document.createElement("div");
-    root.insertAdjacentHTML("afterbegin", String(panelHtml));
-    const modal = root.firstElementChild;
+    const parsed = new DOMParser().parseFromString(String(panelHtml), "text/html");
+    const modal = parsed.body.firstElementChild;
     if (!(modal instanceof HTMLElement)) return null;
     const stats = requireIn<HTMLElement>(modal, `#${STATS_ID}`);
     const search = requireIn<HTMLInputElement>(modal, `#${SEARCH_ID}`);

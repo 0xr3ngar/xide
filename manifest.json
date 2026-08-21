@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Xide",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Hide posts from countries you don't want to see on X.",
     "homepage_url": "https://github.com/0xr3ngar/xide",
     "author": "contact@bnn.dev",
@@ -24,14 +24,14 @@
     "browser_specific_settings": {
         "gecko": {
             "id": "xide@bnn.dev",
-            "strict_min_version": "140.0",
+            "strict_min_version": "142.0",
             "data_collection_permissions": {
                 "required": ["none"],
                 "optional": []
             }
         },
         "gecko_android": {
-            "strict_min_version": "120.0"
+            "strict_min_version": "142.0"
         }
     },
     "developer": {

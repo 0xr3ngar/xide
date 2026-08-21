@@ -215,6 +215,29 @@
     line-height: 1.2;
 }
 
+#xide-button .xide-icon {
+    position: relative;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    box-sizing: border-box;
+    flex: none;
+}
+
+#xide-button .xide-icon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -2px;
+    right: -2px;
+    height: 2px;
+    background: currentColor;
+    transform: translateY(-50%) rotate(-45deg);
+    border-radius: 1px;
+}
+
 #xide-button .xide-label {
     font-weight: 700;
 }
